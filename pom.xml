@@ -7,6 +7,68 @@
     <groupId>yimkong</groupId>
     <artifactId>my_tools</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <org.slf4j.version>1.6.1</org.slf4j.version>
+        <org.log4j.version>1.2.16</org.log4j.version>
+        <spring.version>4.1.5.RELEASE</spring.version>
+        <hibernate.version>3.6.10.Final</hibernate.version>
+        <javassist.version>3.22.0-GA</javassist.version>
+        <cglib.version>3.2.6</cglib.version>
+        <netty.version>4.0.56.Final</netty.version>
+        <jakarta.version>3.1</jakarta.version>
+        <beanutils-version>1.8.3</beanutils-version>
+        <aspject.version>1.7.4</aspject.version>
+        <common.version>3.6</common.version>
+    </properties>
 
-    
+    <dependencies>
+        <!-- apache -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.4</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${jakarta.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>${jakarta.version}</version>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>lombok-needs-tools-jar</id>
+            <activation>
+                <file>
+                    <exists>${java.home}/../lib/tools.jar</exists>
+                </file>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.projectlombok</groupId>
+                        <artifactId>lombok-maven-plugin</artifactId>
+                        <version>1.16.18.1</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>sun.jdk</groupId>
+                                <artifactId>tools</artifactId>
+                                <version>1.8</version>
+                                <scope>system</scope>
+                                <systemPath>${java.home}/../lib/tools.jar</systemPath>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
