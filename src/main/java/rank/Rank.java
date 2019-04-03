@@ -12,9 +12,6 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  * date 2019/4/3
  */
 public class Rank {
-    public static void main(String[] args) {
-
-    }
 
     private volatile List<RankItem> lists = new LinkedList<>();
     private transient volatile ReadWriteLock lock = new ReentrantReadWriteLock();
