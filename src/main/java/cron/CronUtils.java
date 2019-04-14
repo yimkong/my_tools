@@ -1459,7 +1459,6 @@ class FastCronParser {
 	 * <code>"Invalid character encountered [Agust]"</code>.
 	 * @param msg The error message
 	 * @param data The data that the message
-	 * @param offset The offset into the data where the error was encountered.
 	 * @return a newly created <code>IllegalArgumentException</code> object.
 	 */
 	private IllegalArgumentException makeIllegalArgumentException(String msg, char[] data) {
