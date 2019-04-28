@@ -199,7 +199,6 @@ public final class DateTime {
      * 时间转化成时间戳（整日期）
      *
      * @param time
-     * @param format
      * @return int
      */
     public static int strToTimeDate(String time) {
@@ -393,7 +392,6 @@ public final class DateTime {
     /**
      * 获取下一个0点或者12点的时间戳
      *
-     * @param time
      * @return
      */
     public static int getZeroHour() {
@@ -534,7 +532,6 @@ public final class DateTime {
     /**
      * 把当前时间格式化
      *
-     * @param format
      * @return int (yyyyMMdd)
      */
     public static int today() {
@@ -545,7 +542,6 @@ public final class DateTime {
     /**
      * 把当前时间格式化
      *
-     * @param format
      * @return int (yyyyMMdd)
      */
     public static int timeYmd(int time) {
@@ -556,7 +552,6 @@ public final class DateTime {
     /**
      * 把明天时间格式化
      *
-     * @param format
      * @return int (yyyyMMdd)
      */
     public static int tomorrow() {
@@ -609,7 +604,6 @@ public final class DateTime {
      *
      * @param obj
      * @return
-     * @throws Err
      */
     private static int parseInt(Object obj) {
         int ret = (int) Double.parseDouble(obj.toString());
@@ -826,7 +820,7 @@ public final class DateTime {
     /**
      * 获得某一时间的几点几分
      *
-     * @param theDate 需要计算的时间
+     * @param theDateTime 需要计算的时间
      */
     public static int getDateForHourAndMinute(int theDateTime, int hour, int minute) {
         if (theDateTime <= 0) {
