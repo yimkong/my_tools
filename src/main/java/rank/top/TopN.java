@@ -155,10 +155,6 @@ public class TopN<K, E extends ITop<K>> {
 
                 updateIndexRangeClosed(position, size() - 1);
             } else {
-                if (index >= elements.size()) {
-                    id_index.remove(e.getId());
-                    add(e);
-                }
                 E old = elements.get(index);
 
                 if (lowerThreshold(e)) {
