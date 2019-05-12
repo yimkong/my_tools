@@ -13,7 +13,7 @@ import java.util.concurrent.CountDownLatch;
  * date 2019/5/12
  */
 public class TestProblem {
-    static Node<Integer> node = new Node<Integer>(0);
+    static Node<Integer> node = new Node<>(0);
 
     public static void main(String[] args) throws InterruptedException {
         CountDownLatch c = new CountDownLatch(100);

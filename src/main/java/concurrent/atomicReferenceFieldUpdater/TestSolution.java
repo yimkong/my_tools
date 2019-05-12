@@ -24,8 +24,8 @@ public class TestSolution {
         List<Thread> list = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             list.add(new Thread(() -> {
+                Node<Integer> pre = node;
                 for (int j = 1; j < 101; j++) {
-                    Node<Integer> pre = node;
                     while (!bufUpdater.compareAndSet(pre, null, new Node<>(j))) {
                         pre = pre.getNext();
                     }
