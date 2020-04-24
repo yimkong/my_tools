@@ -25,7 +25,7 @@
         <common.version>3.6</common.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <log4j.version>1.2.17</log4j.version>
+        <log4j.version>1.2.15</log4j.version>
         <slf4j.version>1.7.25</slf4j.version>
     </properties>
 
@@ -35,6 +35,12 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>18.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jboss.logmanager/jboss-logmanager -->
+        <dependency>
+            <groupId>org.jboss.logmanager</groupId>
+            <artifactId>jboss-logmanager</artifactId>
+            <version>2.0.3.Final</version>
         </dependency>
 
         <dependency>
